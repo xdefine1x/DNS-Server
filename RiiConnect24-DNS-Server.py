@@ -201,7 +201,7 @@ class Resolver:
                         found = True
                         break
             if not found:
-                reply.add_answer(RR(request.q.qname,QTYPE.A,rdata=A("1.1.1.1"),ttl=60))
+                reply.add_answer(RR(request.q.qname,QTYPE.A,rdata=A(socket.gethostbyname_ex(request.q.qname)),ttl=60))
 
         return reply
 
