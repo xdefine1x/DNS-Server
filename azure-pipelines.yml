@@ -39,7 +39,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'pyinstaller --onefile sudomemoDNS_v1.0.spec'
+    script: 'pyinstaller --onefile RiiConnect24-DNS-Server_v1.0.spec'
 
 - task: PublishBuildArtifacts@1
   inputs:
