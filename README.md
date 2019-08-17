@@ -1,6 +1,6 @@
 # RiiConnect24 DNS Server
 
-This DNS Server will run locally on your computer and will allow your Wii to connect to RiiConnect24 servers even if your ISP blocks connections to our DNS Server.
+This DNS Server will run locally on your computer and allow your Wii to connect to RiiConnect24 servers even if your ISP blocks connections to our DNS Server.
 
 ## Setup
 
@@ -31,7 +31,7 @@ After starting the program, it will download the current list of the DNS Address
 
 On screen, you will see the IP Address assigned to your computer by the DHCP Server on your NAT (router).
 
-If your Wii will be connected to the same network as your PC, it will be able to connect to the server on your PC.
+If your Wii is connected to the same network as your PC, it will be able to connect to the server on your PC.
 
 <p align="center">
   <img src="https://i.imgur.com/oageZQ3.jpg">
