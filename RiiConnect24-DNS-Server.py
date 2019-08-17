@@ -189,6 +189,7 @@ class Resolver:
                 rr and reply.add_answer(rr)
         else:
             # no direct zone so look for an SOA record for a higher level zone
+            found = False
             for zone_label, zone_records in self.zones.items():
                 if request.q.qname.matchSuffix(zone_label):
                     try:
@@ -197,7 +198,10 @@ class Resolver:
                         continue
                     else:
                         reply.add_answer(soa_record.as_rr(zone_label))
+                        found = True
                         break
+             if not found:
+                reply.add_answer(RR(request.q.qname,QTYPE.A,rdata=A("1.1.1.1"),ttl=60))
 
         return reply
 
@@ -216,7 +220,7 @@ elif get_platform() == 'OS X':
   print("[INFO] If you aren't seeing any requests, check that this is the case first with lsof -i:53 (requires lsof)")
   print("[INFO] To run as root, prefix the command with 'sudo'")
 elif get_platform() == 'Windows':
-  print("[INFO] Please note: If you see a notification about firewall, allow the application to work. If you're using 3rd party  firewall on your computer - you may want to add this program to your firewall and allow traffic.")
+  print("[INFO] Please note: If you see a notification about firewall, allow the application to work. If you're using 3rd party  firewall on your computer - you may want to - this program to your firewall and allow traffic.")
 
 try:
   servers = [
