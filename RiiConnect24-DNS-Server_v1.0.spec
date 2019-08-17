@@ -3,8 +3,8 @@
 block_cipher = None
 
 
-a = Analysis(['sudomemoDNS.py'],
-             pathex=['C:\\Users\\Administrator\\sudomemo-dns'],
+a = Analysis(['RiiConnect24-DNS-Server.py'],
+             pathex=['K:\\GitHub\\RiiConnect24-DNS-Server\\'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -23,10 +23,10 @@ exe = EXE(pyz,
           a.zipfiles,
           a.datas,
           [],
-          name='sudomemoDNS_v1.0',
+          name='RiiConnect24_v1.0',
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,
           upx=True,
           runtime_tmpdir=None,
-          console=True , icon='C:\\Users\\Administrator\\sudomemo-dns\\sudomemo.ico')
+          console=True , icon='K:\\GitHub\\RiiConnect24-DNS-Server\\riiconnect24.ico')

@@ -1,6 +1,9 @@
-# sudomemoDNS v1.0
+# Original sudomemoDNS v1.0
 # (c) 2019 Austin Burk/Sudomemo
 # All rights reserved
+
+# RiiConnect24 DNS Server v1.0
+# Created by Austin Burk/Sudomemo. Edited by KcrPL.
 
 from datetime import datetime
 from time import sleep
@@ -26,7 +29,7 @@ def get_platform():
 
     return platforms[sys.platform]
 
-SUDOMEMODNS_VERSION = "1.0"
+RIICONNECT24DNSSERVER_VERSION = "1.0"
 
 def get_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -45,31 +48,31 @@ SERIAL = int((datetime.utcnow() - EPOCH).total_seconds())
 MY_IP = get_ip()
 
 print("+===============================+")
-print("|      Sudomemo DNS Server      |")
-print("|          Version " + SUDOMEMODNS_VERSION + "          |")
+print("|    RiiConnect24 DNS Server    |")
+print("|          Version " + RIICONNECT24DNSSERVER_VERSION + "          |")
 print("+===============================+\n")
 
-print("Hello! This server will allow you to connect to Sudomemo when")
-print("your Internet Service Provider does not work with custom DNS.\n")
+print("Hello! This server will allow you to connect to RiiConnect24 when your Internet Service Provider does not work with custom DNS.")
+
+print("This tool will help you avoid error 107304 in Forecast/News Channel.\n")
+
 
 print("#### How To Use ####\n")
-print("The setup process does not differ from what is shown at")
-print("https://support.sudomemo.net/setup except for the values")
-print("to enter in your custom DNS settings.\n")
+print("The setup process does not differ from what is shown at https://wii.guide/riiconnect24 except for the values to enter in your custom DNS settings.")
+print("First, make sure that your Wii is connected to the same network as this computer.")
 
-print("First, make sure that your Nintendo DSi is connected to the")
-print("same network as this computer.")
+print("\nHere are the settings you need to type in on your Wii in the DNS section.:\n")
+print(":---------------------------:")
+print("  Primary DNS:  ",MY_IP  )
+print("  Secondary DNS: 1.1.1.1")
+print(":---------------------------:")
 
-print("\nHere are the settings you will put in for DNS on your Nintendo DSi:\n")
-print("Primary DNS:  ",MY_IP)
-print("Secondary DNS: 8.8.8.8")
-
-print("All other settings should match what is shown at the above URL.\n")
+print("\nAll other settings should match what is shown at the above URL.\n")
 
 print("#### Getting Help ####\n")
-print("Need help? Visit our Discord server or check out https://support.sudomemo.net.\n")
+print("Need help? Visit our Discord server https://discord.gg/b4Y7jfD or contact us at support@riiconnect24.net\n")
 
-print("[INFO] Starting up")
+print("--- Starting up ---")
 
 TYPE_LOOKUP = {
     A: QTYPE.A,
@@ -89,9 +92,9 @@ class SudomemoDNSLogger(object):
     def log_send(self, handler, data):
         pass
     def log_request(self, handler, request):
-        print("[INFO] Received DNS request from DSi at " + handler.client_address[0])
+        print("[INFO] Received DNS request from Wii at " + handler.client_address[0])
     def log_reply(self, handler, reply):
-        print("[INFO] Sent response to DSi at " + handler.client_address[0])
+        print("[INFO] Sent response to Wii at " + handler.client_address[0])
     def log_error(self, handler, e):
         logger.error("[INFO] Invalid DNS request from " + handler.client_address[0])
     def log_truncated(self, handler, reply):
@@ -152,9 +155,9 @@ class Record:
 ZONES = {}
 
 try:
-  get_zones = requests.get("https://www.sudomemo.net/api/dns_zones.json", headers={'User-Agent': 'SudomemoDNS/' + SUDOMEMODNS_VERSION + ' (' + get_platform() + ')'})
+  get_zones = requests.get("https://raw.githubusercontent.com/RiiConnect24/RiiConnect24-DNS-Server/master/dns_zones.json")
 except requests.exceptions.Timeout:
-  print("[ERROR] Couldn't load DNS data: connection to Sudomemo timed out.")
+  print("[ERROR] Couldn't load DNS data: connection to GitHub timed out.")
   print("[ERROR] Are you connected to the Internet?")
 except requests.exceptions.RequestException as e:
   print("[ERROR] Couldn't load DNS data.")
@@ -164,7 +167,6 @@ try:
   zones = json.loads(get_zones.text)
 except ValueError as e:
   print("[ERROR] Couldn't load DNS data: invalid response from server")
-  print("[ERROR] Check that you can visit sudomemo.net")
 
 for zone in zones:
   if zone["type"] == "a":
@@ -172,7 +174,7 @@ for zone in zones:
   elif zone["type"] == "p":
     ZONES[zone["name"]] = [ Record(A, socket.gethostbyname(zone["value"])) ]
 
-print("[INFO] DNS information loaded successfully.")
+print("[INFO] DNS information has been downloaded successfully.")
 
 class Resolver:
     def __init__(self):
@@ -214,10 +216,7 @@ elif get_platform() == 'OS X':
   print("[INFO] If you aren't seeing any requests, check that this is the case first with lsof -i:53 (requires lsof)")
   print("[INFO] To run as root, prefix the command with 'sudo'")
 elif get_platform() == 'Windows':
-  print("[INFO] Please note: On Windows, you may have to allow this application through")
-  print("[INFO] the firewall. If so, a popup will appear in a moment.")
-  print("[INFO] If you aren't seeing any requests, make sure you have done so first.")
-  print("[INFO] Disregard this message if you have already done so.")
+  print("[INFO] Please note: If you see a notification about firewall, allow the application to work. If you're using 3rd party  firewall on your computer - you may want to add this program to your firewall and allow traffic.")
 
 try:
   servers = [
@@ -228,10 +227,9 @@ except PermissionError:
   print("[ERROR] Permission error: check that you are running this as Administrator or root")
   sys.exit(1)
 
-
-print("[INFO] Starting Sudomemo DNS server.")
-
-print("[INFO] Now waiting for DNS requests from your Nintendo DSi System.")
+print("-- Done --- \n")
+print("[INFO] Starting RiiConnect24 DNS server.")
+print("[INFO] Ready. Waiting for your Wii to send DNS Requests...\n")
 
 if __name__ == '__main__':
     for s in servers:
