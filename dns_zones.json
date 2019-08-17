@@ -223,5 +223,15 @@
       "type":"a",
       "name":"entup.wii.rc24.xyz",
       "value":"164.132.44.106"
-   } 
+   },
+   {  
+      "type":"a",
+      "name":"vtp.wapp.wii.com",
+      "value":"164.132.44.106"
+   },
+   {  
+      "type":"a",
+      "name":"vt.wii.rc24.xyz",
+      "value":"164.132.44.106"
+   }
 ]
