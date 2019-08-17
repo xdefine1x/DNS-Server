@@ -233,5 +233,30 @@
       "type":"a",
       "name":"vt.wii.rc24.xyz",
       "value":"164.132.44.106"
+   },
+   {  
+      "type":"a",
+      "name":"wus.wapp.wii.com",
+      "value":"164.132.44.106"
+   },
+   {  
+      "type":"a",
+      "name":"wus.wii.rc24.xyz",
+      "value":"164.132.44.106"
+   },
+   {  
+      "type":"a",
+      "name":"nwcs.wii.rc24.xyz",
+      "value":"164.132.44.106"
+   },
+   {  
+      "type":"a",
+      "name":"bookmark.rc24.xyz",
+      "value":"164.132.44.106"
+   },
+   {  
+      "type":"a",
+      "name":"rc24.xyz",
+      "value":"164.132.44.106"
    }
 ]
