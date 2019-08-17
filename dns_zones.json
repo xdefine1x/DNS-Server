@@ -2,102 +2,102 @@
    {  
       "type":"a",
       "name":"cfh.wapp.wii.com",
-      "value":"164.132.44.106"
+      "value":"164.132.44.106 "
    },
    {  
       "type":"a",
       "name":"ente.wapp.wii.com",
-      "value":"164.132.44.106"
+      "value":"164.132.44.106 "
    },
    {  
       "type":"a",
       "name":"entj.wapp.wii.com",
-      "value":"164.132.44.106"
+      "value":"164.132.44.106 "
    },
    {  
       "type":"a",
       "name":"entu.wapp.wii.com",
-      "value":"164.132.44.106"
+      "value":"164.132.44.106 "
    },
    {  
       "type":"a",
       "name":"miicontest.wapp.wii.com",
-      "value":"164.132.44.106"
+      "value":"164.132.44.106 "
    },
    {  
       "type":"a",
       "name":"miicontestp.wapp.wii.com",
-      "value":"164.132.44.106"
+      "value":"164.132.44.106 "
    },
    {  
       "type":"a",
       "name":"news.wapp.wii.com",
-      "value":"164.132.44.106"
+      "value":"164.132.44.106 "
    },
    {  
       "type":"a",
       "name":"nwcs.wapp.wii.com",
-      "value":"164.132.44.106"
+      "value":"164.132.44.106 "
    },
    {  
       "type":"a",
       "name":"vt.wapp.wii.com",
-      "value":"164.132.44.106"
+      "value":"164.132.44.106 "
    },
    {  
       "type":"a",
       "name":"wus.wapp.wii.com",
-      "value":"164.132.44.106"
+      "value":"164.132.44.106 "
    },
    {  
       "type":"a",
       "name":"weather.wapp.wii.com",
-      "value":"164.132.44.106"
+      "value":"164.132.44.106 "
    },
    {  
       "type":"a",
       "name":"wc24.wii.com",
-      "value":"164.132.44.106"
+      "value":"164.132.44.106 "
    },
    {  
       "type":"a",
       "name":"gamespy.com",
-      "value":"46.4.79.141"
+      "value":"46.4.79.141 "
    },
    {  
       "type":"a",
       "name":"nas.nintendowifi.net",
-      "value":"178.62.43.212"
+      "value":"178.62.43.212 "
    },
    {  
       "type":"a",
       "name":"dls1.wiimmfi.de",
-      "value":"165.227.235.155"
+      "value":"165.227.235.155 "
    },
    {  
       "type":"a",
       "name":"dls2.wiimmfi.de",
-      "value":"165.227.235.155"
+      "value":"165.227.235.155 "
    },
    {  
       "type":"a",
       "name":"dls1.riiconnect24.net",
-      "value":"165.227.235.155"
+      "value":"165.227.235.155 "
    },
    {  
       "type":"a",
       "name":"dls2.riiconnect24.net",
-      "value":"165.227.235.155"
+      "value":"165.227.235.155 "
    },
    {  
       "type":"a",
       "name":"dls2.pokeacer.tk",
-      "value":"165.227.235.155"
+      "value":"165.227.235.155 "
    },
    {  
       "type":"a",
       "name":"naswii.dev.wiimmfi.de",
-      "value":"46.4.79.141"
+      "value":"46.4.79.141 "
    },
    {  
       "type":"a",
@@ -206,67 +206,7 @@
    },
    {  
       "type":"a",
-      "name":"vtp.wii.rc24.xyz",
-      "value":"164.132.44.106"
-   },
-   {  
-      "type":"a",
-      "name":"entus.wii.rc24.xyz",
-      "value":"164.132.44.106"
-   },
-   {  
-      "type":"a",
-      "name":"entuc.wii.rc24.xyz",
-      "value":"164.132.44.106"
-   },
-   {  
-      "type":"a",
-      "name":"entup.wii.rc24.xyz",
-      "value":"164.132.44.106"
-   },
-   {  
-      "type":"a",
-      "name":"vtp.wapp.wii.com",
-      "value":"164.132.44.106"
-   },
-   {  
-      "type":"a",
-      "name":"vt.wii.rc24.xyz",
-      "value":"164.132.44.106"
-   },
-   {  
-      "type":"a",
-      "name":"wus.wapp.wii.com",
-      "value":"164.132.44.106"
-   },
-   {  
-      "type":"a",
-      "name":"wus.wii.rc24.xyz",
-      "value":"164.132.44.106"
-   },
-   {  
-      "type":"a",
-      "name":"nwcs.wii.rc24.xyz",
-      "value":"164.132.44.106"
-   },
-   {  
-      "type":"a",
-      "name":"bookmark.rc24.xyz",
-      "value":"164.132.44.106"
-   },
-   {  
-      "type":"a",
-      "name":"rc24.xyz",
-      "value":"164.132.44.106"
-   },
-   {  
-      "type":"a",
-      "name":"mtw.rc24.xyz",
-      "value":"164.132.44.106"
-   },
-   {  
-      "type":"a",
-      "name":"entu.wii.rc24.xyz",
-      "value":"164.132.44.106"
+      "name":"syscheck.rc24.xyz",
+      "value":"165.227.235.155"
    }
 ]
