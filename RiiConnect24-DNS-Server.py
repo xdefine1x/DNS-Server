@@ -86,7 +86,7 @@ TYPE_LOOKUP = {
 
 # Can't seem to turn off DNSLogger with a None type so let's just null it out with a dummy function
 
-class SudomemoDNSLogger(object):
+class RiiConnect24DNSLogger(object):
     def log_recv(self, handler, data):
         pass
     def log_send(self, handler, data):
@@ -176,6 +176,8 @@ for zone in zones:
 
 print("[INFO] DNS information has been downloaded successfully.")
 
+print(socket.gethostbyname_ex("google.com")[2][0])
+
 class Resolver:
     def __init__(self):
         self.zones = {DNSLabel(k): v for k, v in ZONES.items()}
@@ -201,13 +203,13 @@ class Resolver:
                         found = True
                         break
             if not found:
-                reply.add_answer(RR(request.q.qname,QTYPE.A,rdata=A(socket.gethostbyname_ex(request.q.qname)),ttl=60))
+                reply.add_answer(RR(str(request.q.qname),QTYPE.A,rdata=A(socket.gethostbyname_ex(str(request.q.qname))[2][0]),ttl=60))
 
         return reply
 
 
 resolver = Resolver()
-dnsLogger = SudomemoDNSLogger()
+dnsLogger = RiiConnect24DNSLogger()
 
 print("[INFO] Detected operating system:", get_platform());
 
