@@ -31,7 +31,7 @@ After starting the program, it will download the current list of the DNS Address
 
 On screen, you will see the IP Address assigned to your computer by the DHCP Server on your NAT (router).
 
-If your Wii will be connected to the same network as your Wii, it will be able to connect to your PC.
+If your Wii will be connected to the same network as your PC, it will be able to connect to the server on your PC.
 
 <p align="center">
   <img src="https://i.imgur.com/oageZQ3.jpg">
