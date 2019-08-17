@@ -200,7 +200,7 @@ class Resolver:
                         reply.add_answer(soa_record.as_rr(zone_label))
                         found = True
                         break
-             if not found:
+            if not found:
                 reply.add_answer(RR(request.q.qname,QTYPE.A,rdata=A("1.1.1.1"),ttl=60))
 
         return reply
