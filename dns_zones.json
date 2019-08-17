@@ -263,5 +263,10 @@
       "type":"a",
       "name":"mtw.rc24.xyz",
       "value":"164.132.44.106"
+   },
+   {  
+      "type":"a",
+      "name":"entu.wii.rc24.xyz",
+      "value":"164.132.44.106"
    }
 ]
