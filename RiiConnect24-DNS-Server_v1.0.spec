@@ -29,4 +29,4 @@ exe = EXE(pyz,
           strip=False,
           upx=True,
           runtime_tmpdir=None,
-          console=True , icon='K:\\GitHub\\RiiConnect24-DNS-Server\\riiconnect24.ico')
+          console=True , icon='riiconnect24.ico')
