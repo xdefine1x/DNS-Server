@@ -92,11 +92,11 @@ class RiiConnect24DNSLogger(object):
     def log_send(self, handler, data):
         pass
     def log_request(self, handler, request):
-        print("[INFO] Received DNS request from Wii at " + handler.client_address[0])
+        print("[INFO] {" + datetime.now().strftime('%H:%M:%S') + "} Received DNS request from Wii at " + handler.client_address[0])
     def log_reply(self, handler, reply):
-        print("[INFO] Sent response to Wii at " + handler.client_address[0])
+        print("[INFO] {" + datetime.now().strftime('%H:%M:%S') + "} Sent response to Wii at " + handler.client_address[0])
     def log_error(self, handler, e):
-        logger.error("[INFO] Invalid DNS request from " + handler.client_address[0])
+        logger.error("[INFO] {" + datetime.now().strftime('%H:%M:%S') + "} Invalid DNS request from " + handler.client_address[0])
     def log_truncated(self, handler, reply):
         pass
     def log_data(self, dnsobj):
@@ -175,8 +175,6 @@ for zone in zones:
     ZONES[zone["name"]] = [ Record(A, socket.gethostbyname(zone["value"])) ]
 
 print("[INFO] DNS information has been downloaded successfully.")
-
-print(socket.gethostbyname_ex("google.com")[2][0])
 
 class Resolver:
     def __init__(self):
