@@ -23,7 +23,9 @@ You will need to install Python 3 and run these commands in the Terminal.
 
 To run it, simply type in:
 
-> sudo <name of your python binary> RiiConnect24-DNS-Server.py
+> sudo python3 RiiConnect24-DNS-Server.py
+
+Replace `python3` with the name/path to your Python binary if necessary
 
 # How to use it?
 
