@@ -1,6 +1,6 @@
-name: CI
+name: Pull Requests CI
 
-on: [push]
+on: [pull_request]
 
 jobs:
   Windows:
@@ -14,11 +14,6 @@ jobs:
       run: pip install dnslib requests pyinstaller
     - name: Build DNS-Server
       run: pyinstaller --onefile RiiConnect24-DNS-Server_v1.0.spec
-    - name: Publish Build Artifacts
-      uses: actions/upload-artifact@master
-      with:
-        name: windows-latest
-        path: dist
         
   Linux:
     runs-on: ubuntu-latest
@@ -31,11 +26,6 @@ jobs:
       run: pip install dnslib requests pyinstaller
     - name: Build DNS-Server
       run: pyinstaller --onefile RiiConnect24-DNS-Server_v1.0.spec
-    - name: Publish Build Artifacts
-      uses: actions/upload-artifact@master
-      with:
-        name: ubuntu-latest
-        path: dist
         
   macOS:
     runs-on: macOS-latest
@@ -48,9 +38,3 @@ jobs:
       run: pip install dnslib requests pyinstaller
     - name: Build DNS-Server
       run: pyinstaller --onefile RiiConnect24-DNS-Server_v1.0.spec
-    - name: Publish Build Artifacts
-      uses: actions/upload-artifact@master
-      with:
-        name: macOS-latest
-        path: dist
-
