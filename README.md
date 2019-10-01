@@ -51,3 +51,6 @@ Once it's done installing, run:
 
 
 | Tip: You may need to edit RiiConnect24-DNS-Server_v1.0.spec so compiling process works on your computer.
+
+# Need more help?
+You can talk to us over on the [RiiConnect24 Discord server](https://discord.gg/b4Y7jfD), where people can try and help you out!
