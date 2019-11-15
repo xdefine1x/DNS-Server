@@ -43,12 +43,11 @@ If your Wii is connected to the same network as your PC, it will be able to conn
 
 # Compiling on Windows
 
-To compile this app on Windows, you will need to run these two commands:
+To compile this app on Windows, you will need to run these two commands (Important: Pyinstaller currently fails to build with Python 3.8, use Python 3.7.5):
 >pip install dnslib requests pyinstaller
 
 Once it's done installing, run:
 >pyinstaller RiiConnect24-DNS-Server_v1.0.spec
-Important: Pyinstaller currently fails to build with Python 3.8, use Python 3.7.5
 
 | Tip: You may need to edit RiiConnect24-DNS-Server_v1.0.spec so compiling process works on your computer.
 
