@@ -15,7 +15,7 @@ If you use Pi-hole you can use the dns_zones-hosts.txt file
 
 # Running on Windows:
 
-Run the .exe provided [on this site](https://github.com/RiiConnect24/RiiConnect24-DNS-Server/releases). If your antivirus notifies you about the .exe file, allow it and run it. If it doesn't work, you should also allow communication for this this .exe in your firewall settings.
+Run the .exe provided [on the releases page](https://github.com/RiiConnect24/RiiConnect24-DNS-Server/releases). If your antivirus notifies you about the .exe file, allow it and run it. If it doesn't work, you should also allow communication for this this .exe in your firewall settings.
 
 # Running on Linux/macOS:
 
@@ -51,7 +51,7 @@ To compile this app on Windows, you will need to run these two commands (Importa
 Once it's done installing, run:
 >pyinstaller RiiConnect24-DNS-Server_v1.0.spec
 
-| Tip: You may need to edit RiiConnect24-DNS-Server_v1.0.spec so compiling process works on your computer.
+| Tip: You may need to edit RiiConnect24-DNS-Server_v1.0.spec so the compiling process works on your computer.
 
 # Need more help?
 You can talk to us over on the [RiiConnect24 Discord server](https://discord.gg/b4Y7jfD), where people can try and help you out!
