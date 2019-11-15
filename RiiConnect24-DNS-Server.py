@@ -29,7 +29,7 @@ def get_platform():
 
     return platforms[sys.platform]
 
-RIICONNECT24DNSSERVER_VERSION = "1.0"
+RIICONNECT24DNSSERVER_VERSION = "1.1"
 
 def get_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -54,7 +54,7 @@ print("+===============================+\n")
 
 print("Hello! This server will allow you to connect to RiiConnect24 when your Internet Service Provider does not work with custom DNS.")
 
-print("This tool will help you avoid error 107304 in Forecast/News Channel.\n")
+print("This tool will help you avoid error 107304 in the Forecast/News Channel. When you use the DNS on your Wii or with this app, it also enhances the use of services such as Wiimmfi. This tool can also be used as a DNS server for Nintendo DS games.\n")
 
 
 print("#### How To Use ####\n")
