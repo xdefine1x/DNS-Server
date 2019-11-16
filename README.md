@@ -1,4 +1,5 @@
-# RiiConnect24 DNS Server [![Actions Status](https://github.com/RiiConnect24/DNS-Server/workflows/Build/badge.svg)](https://github.com/RiiConnect24/DNS-Server/actions)
+RiiConnect24 DNS Server [![Actions Status](https://github.com/RiiConnect24/DNS-Server/workflows/Build/badge.svg)](https://github.com/RiiConnect24/DNS-Server/actions)
+===
 
 This DNS Server will run locally on your computer and allow your Wii to connect to RiiConnect24 servers even if your ISP blocks connections to our DNS Server. When you use the DNS on your Wii or with this app, it also enhances the use of services such as Wiimmfi. This tool can also be used as a DNS server for Nintendo DS games.
 
@@ -11,7 +12,7 @@ You will only need to change DNS Settings in your Wii.
 
 First, make sure that your Wii is connected to the same network as your computer is.
 
-If you use Pi-hole you can use the dns_zones-hosts.txt file
+**If you use Pi-hole, please see [Setting up Pi-hole](#Setting-up-Pi-hole)**
 
 # Running on Windows:
 
@@ -52,6 +53,22 @@ Once it's done installing, run:
 >pyinstaller RiiConnect24-DNS-Server.spec
 
 | Tip: You may need to edit RiiConnect24-DNS-Server_v1.0.spec so the compiling process works on your computer.
+
+# Setting up Pi-hole
+
+On the server running Pi-hole, run the following commands:
+
+```bash
+git clone https://github.com/riiconnect24/dns-server
+cd dns-server
+sudo mv ./dns_zones-hosts.txt /path/to/somewhere/
+sudo touch /etc/dnsmasq.d/customHosts.conf
+echo "addn-hosts=/path/to/somewhere/dns_zones-hosts.txt" | sudo tee /etc/dnsmasq.d/customHosts.conf
+cd ..
+rm -rf dns-server/
+sudo systemctl restart pihole-FTL.service
+```
+Substitute any directory of your choice into `/path/to/somewhere/` which is accessible by the root user. An example of this can be `/home/pi/`.
 
 # Need more help?
 You can talk to us over on the [RiiConnect24 Discord server](https://discord.gg/b4Y7jfD), where people can try and help you out!
