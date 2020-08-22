@@ -82,27 +82,12 @@
    {  
       "type":"a",
       "name":"dls1.wiimmfi.de",
-      "value":"165.227.235.155 "
+      "value":"195.201.236.139 "
    },
    {  
       "type":"a",
-      "name":"dls2.wiimmfi.de",
-      "value":"165.227.235.155 "
-   },
-   {  
-      "type":"a",
-      "name":"dls1.riiconnect24.net",
-      "value":"165.227.235.155 "
-   },
-   {  
-      "type":"a",
-      "name":"dls2.riiconnect24.net",
-      "value":"165.227.235.155 "
-   },
-   {  
-      "type":"a",
-      "name":"dls2.pokeacer.tk",
-      "value":"165.227.235.155 "
+      "name":"dls1.ilostmymind.xyz",
+      "value":"195.201.236.139 "
    },
    {  
       "type":"a",
@@ -112,7 +97,7 @@
    {  
       "type":"a",
       "name":"peerchat.gs.nintendowifi.net",
-      "value":"165.227.235.155"
+      "value":"195.201.236.139 "
    },
    {  
       "type":"a",
@@ -127,12 +112,12 @@
    {  
       "type":"a",
       "name":"gamestats.gs.nintendowifi.net",
-      "value":"165.227.235.155"
+      "value":"195.201.236.139 "
    },
    {  
       "type":"a",
       "name":"gamestats2.gs.nintendowifi.net",
-      "value":"165.227.235.155"
+      "value":"195.201.236.139 "
    },
    {  
       "type":"a",
@@ -148,6 +133,11 @@
       "type":"a",
       "name":"mariokartwii.race.gs.wiimmfi.de",
       "value":"164.132.44.106"
+   },
+   {
+      "type":"a",
+      "name":"master.gs.nintendowifi.net",
+      "value":"95.217.77.151"
    },
    {  
       "type":"a",
@@ -212,11 +202,11 @@
    {  
       "type":"a",
       "name":"syscheck.softwii.de",
-      "value":"165.227.235.155"
+      "value":"195.201.236.139"
    },
    {  
       "type":"a",
       "name":"syscheck.rc24.xyz",
-      "value":"165.227.235.155"
+      "value":"195.201.236.139"
    }
 ]
