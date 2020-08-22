@@ -54,12 +54,12 @@ print("+===============================+\n")
 
 print("Hello! This server will allow you to connect to RiiConnect24 when your Internet Service Provider does not work with custom DNS.")
 
-print("This tool will help you avoid error 107304 in the Forecast/News Channel. When you use the DNS on your Wii or with this app, it also enhances the use of services such as Wiimmfi. This tool can also be used as a DNS server for Nintendo DS games.\n")
+print("This tool will help you avoid error 107304 in the Forecast/News Channel. When you use the DNS on your Wii / DS or with this app, it also enhances the use of services such as Wiimmfi. This tool can also be used as a DNS server for Nintendo DS games.\n")
 
 
 print("#### How To Use ####\n")
 print("The setup process does not differ from what is shown at https://wii.guide/riiconnect24 except for the values to enter in your custom DNS settings.")
-print("First, make sure that your Wii is connected to the same network as this computer.")
+print("First, make sure that your Wii / DS is connected to the same network as this computer.")
 
 print("\nHere are the settings you need to type in on your Wii in the DNS section.:\n")
 print(":---------------------------:")
@@ -202,7 +202,10 @@ class Resolver:
                         found = True
                         break
             if not found:
-                reply.add_answer(RR(str(request.q.qname),QTYPE.A,rdata=A(socket.gethostbyname_ex(str(request.q.qname))[2][0]),ttl=60))
+                if "nintendowifi.net" in str(request.q.qname):
+                    reply.add_answer(RR(str(request.q.qname),QTYPE.A,rdata=A("95.217.77.151"),ttl=60))
+                else:
+                    reply.add_answer(RR(str(request.q.qname),QTYPE.A,rdata=A(socket.gethostbyname_ex(str(request.q.qname))[2][0]),ttl=60))
 
         return reply
 
@@ -234,7 +237,7 @@ except PermissionError:
 
 print("-- Done --- \n")
 print("[INFO] Starting RiiConnect24 DNS server.")
-print("[INFO] Ready. Waiting for your Wii to send DNS Requests...\n")
+print("[INFO] Ready. Waiting for your Wii / DS to send DNS Requests...\n")
 
 if __name__ == '__main__':
     for s in servers:
