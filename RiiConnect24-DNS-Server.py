@@ -2,7 +2,7 @@
 # (c) 2019 Austin Burk/Sudomemo
 # All rights reserved
 
-# RiiConnect24 DNS Server v1.1
+# RiiConnect24 DNS Server v1.2
 # Created by Austin Burk/Sudomemo. Edited by KcrPL and Larsenv.
 
 from datetime import datetime
@@ -29,7 +29,7 @@ def get_platform():
 
     return platforms[sys.platform]
 
-RIICONNECT24DNSSERVER_VERSION = "1.1"
+RIICONNECT24DNSSERVER_VERSION = "1.2"
 
 def get_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
