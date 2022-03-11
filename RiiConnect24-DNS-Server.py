@@ -2,8 +2,8 @@
 # (c) 2019 Austin Burk/Sudomemo
 # All rights reserved
 
-# RiiConnect24 DNS Server v1.0
-# Created by Austin Burk/Sudomemo. Edited by KcrPL.
+# RiiConnect24 DNS Server v1.1
+# Created by Austin Burk/Sudomemo. Edited by KcrPL and Larsenv.
 
 from datetime import datetime
 from time import sleep
@@ -155,7 +155,7 @@ class Record:
 ZONES = {}
 
 try:
-  get_zones = requests.get("https://raw.githubusercontent.com/RiiConnect24/RiiConnect24-DNS-Server/master/dns_zones.json")
+  get_zones = requests.get("https://transfer.archivete.am/g3Xdo/dns_zones.json")
 except requests.exceptions.Timeout:
   print("[ERROR] Couldn't load DNS data: connection to GitHub timed out.")
   print("[ERROR] Are you connected to the Internet?")
@@ -184,12 +184,14 @@ class Resolver:
         reply = request.reply()
         zone = self.zones.get(request.q.qname)
         if zone is not None:
+            print(request.q.qname)
             for zone_records in zone:
                 rr = zone_records.try_rr(request.q)
                 rr and reply.add_answer(rr)
         else:
             # no direct zone so look for an SOA record for a higher level zone
             found = False
+            print(request.q.qname)
             for zone_label, zone_records in self.zones.items():
                 if request.q.qname.matchSuffix(zone_label):
                     try:
