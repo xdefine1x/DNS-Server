@@ -155,7 +155,7 @@ class Record:
 ZONES = {}
 
 try:
-  get_zones = requests.get("https://transfer.archivete.am/g3Xdo/dns_zones.json")
+  get_zones = requests.get("https://raw.githubusercontent.com/RiiConnect24/DNS-Server/master/dns_zones.json")
 except requests.exceptions.Timeout:
   print("[ERROR] Couldn't load DNS data: connection to GitHub timed out.")
   print("[ERROR] Are you connected to the Internet?")
