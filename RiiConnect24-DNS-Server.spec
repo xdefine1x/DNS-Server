@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['RiiConnect24-DNS-Server.py'],
-             pathex=['K:\\GitHub\\RiiConnect24-DNS-Server\\'],
+             pathex=[],
              binaries=[],
              datas=[],
              hiddenimports=[],
