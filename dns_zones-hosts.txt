@@ -20,7 +20,7 @@
 178.62.43.212 it-ds.pokemon-gl.com
 178.62.43.212 ko-ds.pokemon-gl.com
 104.248.0.110 maintenance.hatena.ne.jp
-167.86.108.126 mariokartwii.race.gs.wiimmfi.de
+188.34.177.217 mariokartwii.race.gs.wiimmfi.de
 95.217.77.181 master.gs.nintendowifi.net
 167.86.108.126 miicontest.wapp.wii.com
 167.86.108.126 miicontestp.wapp.wii.com
